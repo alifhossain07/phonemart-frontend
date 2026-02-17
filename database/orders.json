@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1764143790238,
+    "customer": {
+      "name": "Alif Hossain",
+      "mobile": "01911185815",
+      "email": "alifhossain56882@gmail.com",
+      "address": "HelalMarket, Uttarkhan, Dhaka"
+    },
+    "shippingMethod": "inside",
+    "shippingCharge": 70,
+    "paymentMethod": "Cash on Delivery",
+    "paymentNumber": null,
+    "promoCode": null,
+    "promoDiscount": 0,
+    "items": [
+      {
+        "id": "129",
+        "name": "Samsung TWS 11",
+        "qty": 1,
+        "price": 287.2,
+        "oldPrice": 359
+      }
+    ],
+    "subtotal": 287.2,
+    "discount": 71.80000000000001,
+    "totalAmount": 285.4,
+    "timestamp": "2025-11-26T07:56:30.238Z"
+  },
+  {
+    "id": 1764143922239,
+    "customer": {
+      "name": "Jamal Bhuiya All",
+      "mobile": "01911185810",
+      "email": "alifhossain56882@gmail.com",
+      "address": "HelalMarket, Uttarkhan, Dhaka"
+    },
+    "shippingMethod": "inside",
+    "shippingCharge": 70,
+    "paymentMethod": "Cash on Delivery",
+    "paymentNumber": null,
+    "promoCode": null,
+    "promoDiscount": 0,
+    "items": [
+      {
+        "id": "130",
+        "name": "Samsung TWS",
+        "qty": 1,
+        "price": 2250,
+        "oldPrice": 2250
+      }
+    ],
+    "subtotal": 2250,
+    "discount": 0,
+    "totalAmount": 2320,
+    "timestamp": "2025-11-26T07:58:42.240Z"
+  }
+]

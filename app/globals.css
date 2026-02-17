@@ -1,0 +1,240 @@
+/* stylelint-disable unknownAtRules */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@glidejs/glide/dist/css/glide.core.min.css";
+
+/* Use Poppins globally */
+html, body {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slideOut {
+  animation: slideOut 0.3s ease-out forwards;
+}
+
+@keyframes pulseScaleColor {
+  0%, 100% {
+    transform: scale(1);
+    color: white;
+  }
+  50% {
+    transform: scale(1.2);
+    color: black;
+  }
+}
+
+.animate-pulseScaleColor {
+  animation: pulseScaleColor 1.5s infinite ease-in-out;
+}
+
+/* GLOBAL MARQUEE ANIMATION */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+/* FADE EFFECT ON LEFT + RIGHT */
+.marquee-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee-wrapper::before,
+.marquee-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #1e40af, transparent);
+}
+
+.marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #1e40af, transparent);
+}
+
+@keyframes fadeDown {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.highlight-banner-text {
+  background: black !important;
+  color: white !important;
+  padding: 2px 6px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.prose img:nth-of-type(n+2) {
+  width: 100% !important;
+  height: 300px !important; /* Fixed height */
+  object-fit: cover !important; /* Ensure the image covers the area */
+  display: block !important;
+  max-width: 100% !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Container for the rendered HTML */
+.dynamic-content-renderer {
+  line-height: 1.6;
+  color: #374151; /* Gray-700 */
+  font-family: sans-serif;
+}
+
+/* Titles/Headings */
+.dynamic-content-renderer h1,
+.dynamic-content-renderer h2,
+.dynamic-content-renderer h3,
+.dynamic-content-renderer h4,
+.dynamic-content-renderer h5,
+.dynamic-content-renderer h6 {
+  font-weight: 700;
+  color: #000;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 1px solid #000000 !important; 
+}
+
+.dynamic-content-renderer h1 {
+  font-size: 2rem;
+}
+
+.dynamic-content-renderer h2 {
+  font-size: 1.75rem;
+}
+
+.dynamic-content-renderer h3 {
+  font-size: 1.25rem;
+}
+
+.dynamic-content-renderer h4 {
+  font-size: 1.125rem;
+}
+
+.dynamic-content-renderer h5 {
+  font-size: 1rem;
+}
+
+.dynamic-content-renderer h6 {
+  font-size: 0.875rem;
+}
+
+/* Paragraphs */
+.dynamic-content-renderer p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.dynamic-content-renderer img:first-of-type {
+  width: 100%;
+  display: block;
+  height: auto;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+/* Second image will be 50% and centered */
+.dynamic-content-renderer img:nth-of-type(2) {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 1rem 0; /* top-bottom 1rem, centered horizontally */
+  border-radius: 4px;
+}
+
+
+/* Lists */
+.dynamic-content-renderer ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dynamic-content-renderer li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Special styling for the Review Box (usually a <div> in CMS) */
+.dynamic-content-renderer .review-highlight {
+  background-color: #f3f4f6; /* Light gray box as seen in Image 1 */
+  padding: 1.25rem;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+}
